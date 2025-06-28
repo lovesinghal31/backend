@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send("server is ready");
 });
 
-const whitelist = ['https://fivejokesfornt.vercel.app/']
+const whitelist = ['https://fivejokesfornt.vercel.app']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -20,6 +20,17 @@ const corsOptions = {
     }
   }
 }
+
+// const whitelist = ['http://localhost:5173']
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error('Not allowed by CORS'))
+//     }
+//   }
+// }
 
 app.get("/api/jokes",cors(corsOptions), (req, res) => {
   const jokes = [
