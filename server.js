@@ -7,7 +7,7 @@ const app = express();
 // app.use(cors())
 
 app.get("/", (req, res) => {
-  res.send("server is ready");
+  res.send("server is ready for real");
 });
 
 const whitelist = ['https://fivejokesfornt.vercel.app']
