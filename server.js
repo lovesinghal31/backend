@@ -14,7 +14,7 @@ app.get("/api/jokes", (req, res) => {
   const jokes = [
     {
       id: 1,
-      title: "Why did the developer go broke?",
+      title: "Why",
       content: "Because he used up all his cache.",
     },
     {
